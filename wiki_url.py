@@ -21,13 +21,13 @@ def Geturl(url):
         
         #find the count of pages that contain the link
         for l in link:
-            k=wikipedia.search(l,max=10000,suggestion=False)
-            
+            k=wikipedia.search(l,suggestion=False)
+            print "hie \n",k
             count={l:len(k)}
             
         #to get the link which has the max count
-        c=[]
-        c.append(max(stats.iteritems(), key=operator.itemgetter(1))[0])
+        
+        c=max(count.iteritems(), key=operator.itemgetter(1))[0]
         
         return c
     except:
