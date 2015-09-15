@@ -22,7 +22,7 @@ def Geturl(url):
         #find the count of pages that contain the link
         for l in link:
             k=wikipedia.search(l,suggestion=False)
-            print "hie \n",k
+            
             count={l:len(k)}
             
         #to get the link which has the max count
